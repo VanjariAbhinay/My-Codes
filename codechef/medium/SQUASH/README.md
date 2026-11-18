@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:08:14.041Z  
+**Submitted:** 2026-11-18T15:11:39.368Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -81,6 +81,7 @@ int main() {
 	while(t--){
 	    int N;
 	    int K;
+	    cin>>N>>K;
 	    string s;
 	    cin>>s;
 	    if(N==1 && K==1) std::cout << "YES" << std::endl;
@@ -95,11 +96,11 @@ int main() {
 	            }
 	            if(s[i]==s[j]){
 	                size-=1;
-	         }
+	            }
 	            i++;
 	            j++;
 	        }
-	            std::cout << "NO" << std::endl;
+	        if(size!=K) std::cout << "NO" << std::endl;
 	    }
 	    
 	}
