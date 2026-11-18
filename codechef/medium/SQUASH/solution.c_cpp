@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t ;
+	std::cin >> t;
+	while(t--){
+	    int N;
+	    int K;
+	    string s ;
+	    cin>>s;
+	    if(N==1 && K==1) std::cout << "YES" << std::endl;
+	    int i =0;
+	    int j =1;
+	    int size=N;
+	    while(i<j && j<N){
+	        if(s[i]==s[j]){
+	            size-=1;
+	        }
+	        if(size==K){
+	            std::cout << "YES" << std::endl;
+	            break;
+	        }
+	        i++;
+	        j++;
+	    }
+	    std::cout << "NO" << std::endl;
+	}
+
+}
