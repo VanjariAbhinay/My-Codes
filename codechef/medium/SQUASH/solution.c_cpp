@@ -24,8 +24,6 @@ int main() {
             }
             if(s[i]==s[j]){
                 size-=1;
-            }else{
-                size=N;
             }
             i++;
         }
