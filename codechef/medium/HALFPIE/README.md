@@ -63,7 +63,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:56:03.778Z  
+**Submitted:** 2026-11-18T15:20:09.708Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -77,24 +77,22 @@ int main() {
 	    int n;
 	    cin>>n;
 	    std::vector<int> arr;
-	    int min_1 =INT_MAX;
-	    int min_2= INT_MAX;
+	    int sum=0;
 	    for(int i =0;i<n;i++){
 	        int num ;
 	        cin>>num;
 	        arr.push_back(num);
-	        min_1=min(num,min_1);
-	        if(num<min_2 && num> min_1){
-	            min_2= min_1;
-	        }
+	        sum+=num;   
 	    }
-	    int sum=0;
-	    for(int i =0;i<n;i++){
-	        sum+=arr[i];
-	        
+	    int copy_sum=sum;
+	    int max_sum=INT_MIN;
+	    int j =0;
+	    for(int i=1;i<n;i++){
+	        int copy_sum_1 = copy_sum - arr[i]-arr[j];
+	        copy_sum= max(copy_sum, copy_sum_1);
+	        j++;
 	    }
-	    sum= sum - min_1/2 - min_2/2;
-	    std::cout << sum << std::endl;
+	   std::cout << max_sum << std::endl;
 	}
 
 }
