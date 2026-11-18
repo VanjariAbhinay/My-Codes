@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:38:19.370Z  
+**Submitted:** 2026-11-18T15:42:25.052Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,26 +85,20 @@ int main() {
         cin >> N >> K;
         string s;
         cin >> s;
-        
-        
-
-        
-            int i = 0;
-            int size = N;
-
-            for (int j = 1; j < N; j++) {
-                if (size == K) {
-                    ans = "YES";
-                    break;
-                }
-                if (s[i] == s[j]) {
-                    size -= 1;
-                }
-                i++;
+        int count_pairs =0;
+        for (int j = 1; j < N; j++) {
+            if(s[j-1]==s[j]){
+                count_pairs+=1;
             }
-        
+        }
+        int rem_size = N - count_pairs;
+        if(rem_size<=K){
+            std::cout << "YES" << std::endl;
+        }else{
+            std::cout << "NO" << std::endl;
+        }
 
-        std::cout << ans << std::endl;
+        
 
     }
 
