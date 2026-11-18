@@ -68,45 +68,45 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:11:39.368Z  
+**Submitted:** 2026-11-18T15:12:56.197Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
-	// your code goes here
-	int t ;
-	std::cin >> t;
-	while(t--){
-	    int N;
-	    int K;
-	    cin>>N>>K;
-	    string s;
-	    cin>>s;
-	    if(N==1 && K==1) std::cout << "YES" << std::endl;
-	    if(N>=2){
-	        int i =0;
-	        int j =1;
-	        int size=N;
-	        while(i<j && j<N){
-	            if(size==K){
-	                std::cout << "YES" << std::endl;
-	                break;
-	            }
-	            if(s[i]==s[j]){
-	                size-=1;
-	            }
-	            i++;
-	            j++;
-	        }
-	        if(size!=K) std::cout << "NO" << std::endl;
-	    }
-	    
-	}
+    // your code goes here
+    int t;
+    std::cin >> t;
+    while (t--) {
+        int N;
+        int K;
+        cin >> N >> K;
+        string s;
+        cin >> s;
+        if (N == 1 && K == 1) std::cout << "YES" << std::endl;
+
+        int i = 0;
+        int j = i + 1;
+        int size = N;
+        while (i < j && j < N) {
+            if (size == K) {
+                std::cout << "YES" << std::endl;
+                break;
+            }
+            if (s[i] == s[j]) {
+                size -= 1;
+            }
+            i++;
+            j++;
+        }
+        if (size != K) std::cout << "NO" << std::endl;
+
+
+    }
 
 }
-
 ```
 
 ---
