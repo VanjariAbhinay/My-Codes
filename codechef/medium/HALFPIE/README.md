@@ -63,40 +63,42 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:20:09.708Z  
+**Submitted:** 2026-11-18T15:23:15.109Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
-	// your code goes here
-	int t ;
-	std::cin >> t;
-	while(t--){
-	    int n;
-	    cin>>n;
-	    std::vector<int> arr;
-	    int sum=0;
-	    for(int i =0;i<n;i++){
-	        int num ;
-	        cin>>num;
-	        arr.push_back(num);
-	        sum+=num;   
-	    }
-	    int copy_sum=sum;
-	    int max_sum=INT_MIN;
-	    int j =0;
-	    for(int i=1;i<n;i++){
-	        int copy_sum_1 = copy_sum - arr[i]-arr[j];
-	        copy_sum= max(copy_sum, copy_sum_1);
-	        j++;
-	    }
-	   std::cout << max_sum << std::endl;
-	}
+    // your code goes here
+    int t;
+    std::cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        std::vector < int > arr;
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            int num;
+            cin >> num;
+            sum += num;
+            arr.push_back(num);
+            
+        }
+        
+        int max_sum = INT_MIN;
+        int j = 0;
+        for (int i = 1; i < n; i++) {
+            int copy_sum_1 = sum - arr[i] - arr[j];
+            int new_sum = copy_sum_1 + arr[i]/2 +arr[j]/2;
+            max_sum = max(max_sum, new_sum);
+            j++;
+        }
+        std::cout << max_sum << std::endl;
+    }
 
 }
-
 ```
 
 ---
