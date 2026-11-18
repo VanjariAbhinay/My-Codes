@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:13:40.374Z  
+**Submitted:** 2026-11-18T15:29:46.378Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -86,23 +86,23 @@ int main() {
         string s;
         cin >> s;
         if (N == 1 && K == 1) std::cout << "YES" << std::endl;
-
-        int i = 0;
-        int j = i + 1;
-        int size = N;
-        while (i < j && j < N) {
-            if (size == K) {
-                std::cout << "YES" << std::endl;
+        int size=N;
+        
+        int i =0;
+        string ans = "NO";
+        for(int j =1;j<N;j++){
+            if(size==K){
+                ans= "YES";
                 break;
             }
-            if (s[i] == s[j]) {
-                size -= 1;
+            if(s[i]==s[j]){
+                size-=1;
+            }else{
+                size=N;
             }
             i++;
-            j++;
         }
-        if (size != K) std::cout << "NO" << std::endl;
-
+        std::cout << ans << std::endl;
 
     }
 
