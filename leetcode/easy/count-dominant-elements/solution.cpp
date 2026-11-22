@@ -12,7 +12,7 @@ public:
             if(nums[i]>=avg){
                 count++;
             }
-            last_num = nums [i];
+            
         }
         return count;
     }
