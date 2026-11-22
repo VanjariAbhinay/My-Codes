@@ -70,7 +70,7 @@ Therefore, the answer is 1.
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.1 MB  
-**Submitted:** 2026-11-22T02:38:03.942Z  
+**Submitted:** 2026-11-22T02:38:32.571Z  
 
 ```cpp
 class Solution {
@@ -83,7 +83,7 @@ public:
         
         int count =0;
         for(int i =1;i<n-1;i++){
-            float avg = nums[i-1]+nums[i+1]/2;
+            int avg = nums[i-1]+nums[i+1]/2;
             if(nums[i]>=avg){
                 count++;
             }
