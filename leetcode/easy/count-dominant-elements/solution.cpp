@@ -8,7 +8,7 @@ public:
         
         int count =0;
         for(int i =1;i<n-1;i++){
-            float avg = nums[i-1]+nums[i+1]/2;
+            int avg = nums[i-1]+nums[i+1]/2;
             if(nums[i]>=avg){
                 count++;
             }
