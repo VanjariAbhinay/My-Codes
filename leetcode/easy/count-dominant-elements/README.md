@@ -69,8 +69,8 @@ Therefore, the answer is 1.
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.9 MB  
-**Submitted:** 2026-11-22T02:37:51.611Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-11-22T02:38:03.942Z  
 
 ```cpp
 class Solution {
@@ -87,7 +87,7 @@ public:
             if(nums[i]>=avg){
                 count++;
             }
-            last_num = nums [i];
+            
         }
         return count;
     }
