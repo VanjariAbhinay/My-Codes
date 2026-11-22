@@ -70,7 +70,7 @@ Therefore, the answer is 1.
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.1 MB  
-**Submitted:** 2026-11-22T02:41:32.200Z  
+**Submitted:** 2026-11-22T02:42:00.180Z  
 
 ```cpp
 class Solution {
@@ -82,6 +82,7 @@ public:
         if(n==1) return 1;
         
         int count =0;
+        if (nums[0] >= nums[1]) count++;
         for(int i =1;i<n-1;i++){
             
             if (2 * nums[i] >= nums[i - 1] + nums[i + 1]) {
